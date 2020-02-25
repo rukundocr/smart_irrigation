@@ -56,7 +56,7 @@ router.post("/post",(req,res)=>{
 
 //get last sensor data feed
 router.get('/getlatest',(req,res)=>{
-  SensorData.find().sort({updated:-1}).limit(1)
+  Thingdata.find().sort({updated:-1}).limit(1)
   .then((data)=>{
     res.json(data).status(200);
   }).catch((error)=>{
@@ -66,7 +66,7 @@ router.get('/getlatest',(req,res)=>{
 
 //get all sensor data feeds
 router.get('/getall',(req,res)=>{
-  SensorData.find().sort({updated:-1})
+  Thingdata.find().sort({updated:-1})
   .then((data)=>{
     res.json(data).status(200);
   }).catch((error)=>{
@@ -75,7 +75,7 @@ router.get('/getall',(req,res)=>{
 })
 //delete sensor data 
 router.delete('/data/:id',(req,res,next)=>{
-  SensorData.deleteOne({_id: req.params.id}).then(
+  Thingdata.deleteOne({_id: req.params.id}).then(
        () => {
          res.status(200).json({
            message: 'Deleted!'
@@ -91,7 +91,7 @@ router.delete('/data/:id',(req,res,next)=>{
 });
 //delete sensor data records 
 router.delete('/data',(req,res,next)=>{
-  SensorData.remove().then(
+  Thingdata.remove().then(
        () => {
          res.status(200).json({
            message: 'Deleted!'
