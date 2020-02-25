@@ -7,8 +7,8 @@ const mongoose= require('mongoose');
 const Thingdata = require('./models/thing.js')
 app.use(express.json());
 //app.use(cors());
- // mongoose.connect('mongodb+srv://rukundo:N0HtpmtxjnR2vYE8@cluster0-bg7kr.mongodb.net/test?retryWrites=true',{ useUnifiedTopology: true, useNewUrlParser: true})
-mongoose.connect('mongodb://localhost:27017/stuffdb',{ useUnifiedTopology: true, useNewUrlParser: true })
+ mongoose.connect('mongodb+srv://rukundo:N0HtpmtxjnR2vYE8@cluster0-bg7kr.mongodb.net/test?retryWrites=true',{ useUnifiedTopology: true, useNewUrlParser: true})
+//mongoose.connect('mongodb://localhost:27017/stuffdb',{ useUnifiedTopology: true, useNewUrlParser: true })
 .then(() => {
     console.log('Successfully connected to local MongoDB )!');
   })
