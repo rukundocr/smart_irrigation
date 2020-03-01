@@ -16,8 +16,6 @@ app.use(cors());
     console.log('Unable to connect to MongoDB !');
     console.error(error);
   });
-//cors
-
 const courses = [
     {id:1 , name : "course1"},
     {id:2 , name :"course2 "}, 
