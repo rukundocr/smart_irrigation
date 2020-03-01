@@ -10,7 +10,7 @@ const bodyParser = require('body-parser');
 // let's use it
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
-//app.use(cors())
+app.use(cors());
 const courseRoutes  = require('./route/course');
 
 app.use("/", courseRoutes);
